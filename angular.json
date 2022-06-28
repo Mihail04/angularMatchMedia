@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "angularMatchMedia": {
+      "projectType": "library",
+      "root": "projects/angular-match-media",
+      "sourceRoot": "projects/angular-match-media/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-match-media/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-match-media/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-match-media/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
+  },
+  "defaultProject": "angularMatchMedia"
+}
