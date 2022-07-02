@@ -3,6 +3,27 @@
 provide MatchMediaService in module or component and inject it.
 Service has only one public method - getViewType whitch return Observable<string>(viewport type)
 DEFAULT_MEDIA_QUERY - InjectionToken. Can be overriden.
+
+### EXAMPLE
+
+```
+@Component({
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css'],
+  viewProviders: [MatchMediaService]
+})
+export class FormComponent implements OnInit {
+
+  constructor(private matchMediaService: MatchMediaService){}
+
+  ngOnInit(){
+    this.matchMediaService.getViewType().subscribe(console.log)
+  }
+}
+
+```
+
 ### DEFAULT_MEDIA_QUERY - default value 
 ```
 [
