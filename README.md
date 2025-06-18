@@ -1,5 +1,8 @@
 # AngularMatchMedia
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Mihail04/angularMatchMedia)
+
+
 provide MatchMediaService in module or component and inject it.
 Service has only one public method - getViewType whitch return Observable<string>(viewport type)
 DEFAULT_MEDIA_QUERY - InjectionToken. Can be overriden.
